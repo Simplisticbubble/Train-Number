@@ -1,0 +1,113 @@
+/* App.css */
+
+.dynamic-divs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+.app__Station-container {
+  background-color: #333; /* Black background color */
+  padding: 20px;
+  border-radius: 10px; /* Adjust as needed */
+  padding-right: 30px;
+  padding-left: 30px;
+}
+.app__Station {
+  
+  background-color: #000;
+  color: #ffa600;
+  width: 25%;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 2px;
+  box-shadow: 0 0 10px rgba(251, 255, 0, 0.5); /* Neon yellow glow */
+}
+
+.app__Station-name h1{
+  font-size: 50px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px rgba(238, 255, 0, 0.8);
+}
+.app__Station-name p{
+  font-size: 24px;
+
+}
+
+.display-Win {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.operations {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.current-operation{
+  font-size: 18px;
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #11e96b;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.operations button {
+  font-size: 18px;
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #2ecc71;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.input_div {
+  font-size: 24px;
+  background-color: #ecf0f1;
+  padding: 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.input_div:hover {
+  background-color: #333;
+  color:#ffa600
+
+}
+
+.top-divs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.current-operation {
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.top-div {
+  font-size: 24px;
+  background-color: #333;
+  color:#ffa600;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+}
+.app__input, .output{
+  display: flex;
+  flex-direction: row;
+  
+}
+

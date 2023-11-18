@@ -50,6 +50,54 @@ function App() {
     }
   };
 
+  const handleImpClick = () => {
+    var x1 = divs.get(0);
+    var x2 = divs.get(1);
+    var x3 = divs.get(2);
+    var x4 = divs.get(3);
+    
+    var operators = ['+', '-', '*', '/'];
+    const permutations = [];
+    for (const op1 of operators) {
+      for (const op2 of operators) {
+        for (const op3 of operators) {
+          const expression = `${num1} ${op1} ${num2} ${op2} ${num3} ${op3} ${num4}`;
+          permutations.push(expression);
+        }
+      }
+    }
+    permutations.forEach((expression) => {
+      const result = eval(expression);
+      if (result === 10) {
+        setWL('Congratulations!');
+        handleIndex();
+        const newDivs = new Map([
+          [0, Math.floor(Math.random() * 10)],
+          [1, Math.floor(Math.random() * 10)],
+          [2, Math.floor(Math.random() * 10)],
+          [3, Math.floor(Math.random() * 10)],
+        ]);
+        console.log(newDivs);
+        setDivs(newDivs);
+
+        setTopDiv([]);
+        return;
+      }
+    });
+    setWL('Nice try ;((');
+      handleIndex();
+      const newDivs = new Map([
+        [0, Math.floor(Math.random() * 10)],
+        [1, Math.floor(Math.random() * 10)],
+        [2, Math.floor(Math.random() * 10)],
+        [3, Math.floor(Math.random() * 10)],
+      ]);
+      console.log(newDivs);
+      setDivs(newDivs);
+      setTopDiv([]);
+      return;
+  };
+
   const performOperation = (updatedTopDiv, newDivs) => {
     const num1 = updatedTopDiv[0];
     const num2 = updatedTopDiv[1];
@@ -118,6 +166,7 @@ function App() {
         <button onClick={() => handleOperatorClick('-')}>-</button>
         <button onClick={() => handleOperatorClick('*')}>*</button>
         <button onClick={() => handleOperatorClick('/')}>/</button>
+        <button onClick={() => handleImpClick()}>Impossible</button>
       </div>
       <div className='app__input'>
       {Array.from(divs.entries()).map(([index, value]) => (
